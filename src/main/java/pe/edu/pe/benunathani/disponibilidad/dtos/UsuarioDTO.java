@@ -3,18 +3,18 @@ package pe.edu.pe.benunathani.disponibilidad.dtos;
 import javax.persistence.Column;
 
 public class UsuarioDTO {
-    private int id;
+    private int idUsuario;
     private String nameUsuario;
     private String SnameUsuario;
     private String PassUsuario;
     private int telusuario;
 
-    public int getId() {
-        return id;
+    public int getIdUsuario() {
+        return idUsuario;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setIdUsuario(int idUsuario) {
+        this.idUsuario = idUsuario;
     }
 
     public String getNameUsuario() {

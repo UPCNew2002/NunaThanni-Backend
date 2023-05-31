@@ -7,7 +7,7 @@ import javax.persistence.*;
 public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private int idUsuario;
     @Column(name = "nameUsuario", length = 20, nullable = false)
     private String nameUsuario;
     @Column(name = "SnameUsuario", length = 20, nullable = false)
@@ -17,23 +17,23 @@ public class Usuario {
     @Column(name = "telusuario", length = 9, nullable = false)
     private int telusuario;
 
-    public Usuario(int id, String nameUsuario, String snameUsuario, String passUsuario, int telusuario) {
-        this.id = id;
+    public Usuario() {
+    }
+
+    public Usuario(int idUsuario, String nameUsuario, String snameUsuario, String passUsuario, int telusuario) {
+        this.idUsuario = idUsuario;
         this.nameUsuario = nameUsuario;
         SnameUsuario = snameUsuario;
         PassUsuario = passUsuario;
         this.telusuario = telusuario;
     }
 
-    public Usuario() {
+    public int getIdUsuario() {
+        return idUsuario;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
+    public void setIdUsuario(int idUsuario) {
+        this.idUsuario = idUsuario;
     }
 
     public String getNameUsuario() {
