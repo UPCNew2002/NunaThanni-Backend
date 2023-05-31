@@ -21,4 +21,21 @@ public class TratamientoServiceImplement implements ITratamientoService {
     public List<Tratamiento> list() {
         return tR.findAll();
     }
+
+    @Override
+    public void delete(int idTratamiento) {
+        tR.deleteById(idTratamiento);
+    }
+
+    @Override
+    public Tratamiento listId(int idTratamiento) {
+        return tR.findById(idTratamiento).orElse(new Tratamiento());
+    }
+
+    @Override
+    public List<Tratamiento> buscarTema(String temaTratamiento) {
+        return tR.findBytemaTratamiento(temaTratamiento);
+    }
+
+
 }
