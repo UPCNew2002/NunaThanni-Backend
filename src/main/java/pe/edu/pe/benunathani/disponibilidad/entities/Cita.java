@@ -17,13 +17,23 @@ public class Cita {
     @JoinColumn(name ="idEstado")
     private Estado estado;
 
+    @ManyToOne
+    @JoinColumn(name ="idPaciente")
+    private Paciente paciente;
+
+    @ManyToOne
+    @JoinColumn(name ="idPsicologo")
+    private Psicologo psicologo;
+
     public Cita() {
     }
 
-    public Cita(int idCita, LocalDate fechaCita, Estado estado) {
+    public Cita(int idCita, LocalDate fechaCita, Estado estado, Paciente paciente, Psicologo psicologo) {
         this.idCita = idCita;
         this.fechaCita = fechaCita;
         this.estado = estado;
+        this.paciente = paciente;
+        this.psicologo = psicologo;
     }
 
     public int getIdCita() {
@@ -48,5 +58,21 @@ public class Cita {
 
     public void setEstado(Estado estado) {
         this.estado = estado;
+    }
+
+    public Paciente getPaciente() {
+        return paciente;
+    }
+
+    public void setPaciente(Paciente paciente) {
+        this.paciente = paciente;
+    }
+
+    public Psicologo getPsicologo() {
+        return psicologo;
+    }
+
+    public void setPsicologo(Psicologo psicologo) {
+        this.psicologo = psicologo;
     }
 }
