@@ -7,7 +7,6 @@ import pe.edu.pe.benunathani.disponibilidad.dtos.TratamientoDTO;
 import pe.edu.pe.benunathani.disponibilidad.entities.Tratamiento;
 import pe.edu.pe.benunathani.disponibilidad.services.ITratamientoService;
 
-import java.time.LocalDate;
 import java.util.List;
 import java.util.stream.Collectors;
 
