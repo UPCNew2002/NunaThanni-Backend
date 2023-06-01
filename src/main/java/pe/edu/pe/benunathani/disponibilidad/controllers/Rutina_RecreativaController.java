@@ -8,6 +8,7 @@ import pe.edu.pe.benunathani.disponibilidad.dtos.Rutina_RecreativaDTO;
 import pe.edu.pe.benunathani.disponibilidad.entities.Rutina_Recreativa;
 import pe.edu.pe.benunathani.disponibilidad.services.IRutina_RecreativaService;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -48,4 +49,5 @@ public class Rutina_RecreativaController {
         Rutina_Recreativa r=m.map(dto,Rutina_Recreativa.class);
         rR.insert(r);
     }
+
 }
