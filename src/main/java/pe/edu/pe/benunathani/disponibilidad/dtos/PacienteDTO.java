@@ -2,9 +2,6 @@ package pe.edu.pe.benunathani.disponibilidad.dtos;
 
 import pe.edu.pe.benunathani.disponibilidad.entities.Usuario;
 
-import javax.persistence.Column;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import java.time.LocalDate;
 
 public class PacienteDTO {
