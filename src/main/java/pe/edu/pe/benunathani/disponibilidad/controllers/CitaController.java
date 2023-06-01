@@ -2,6 +2,7 @@ package pe.edu.pe.benunathani.disponibilidad.controllers;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import pe.edu.pe.benunathani.disponibilidad.dtos.CitaDTO;
 import pe.edu.pe.benunathani.disponibilidad.entities.Cita;
@@ -9,7 +10,9 @@ import pe.edu.pe.benunathani.disponibilidad.services.ICitaService;
 
 
 import java.time.LocalDate;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 @RestController
@@ -57,5 +60,13 @@ public class CitaController {
         ModelMapper m=new ModelMapper();
         Cita c=m.map(dto,Cita.class);
         cS.insert(c);
+    }
+
+    @GetMapping("/Contador")
+    public ResponseEntity<Map<String, Long>> contador(){
+        long contador = cS.ContarFecha();
+        Map<String, Long> earesponse = new HashMap<>();
+        earesponse.put("cantidad", contador);
+        return ResponseEntity.ok(earesponse);
     }
 }

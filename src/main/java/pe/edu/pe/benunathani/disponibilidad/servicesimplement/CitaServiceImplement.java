@@ -40,4 +40,9 @@ public class CitaServiceImplement implements ICitaService {
     public Cita listId(int idCita) {
         return cR.findById(idCita).orElse(new Cita());
     }
+
+    @Override
+    public int ContarFecha() {
+        return cR.ContarFecha();
+    }
 }

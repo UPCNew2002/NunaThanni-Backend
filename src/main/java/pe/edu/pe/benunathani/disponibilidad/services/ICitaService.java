@@ -13,4 +13,6 @@ public interface ICitaService {
     public void delete (int idCita);
 
     public Cita listId (int idCita);
+
+    public  int ContarFecha();
 }

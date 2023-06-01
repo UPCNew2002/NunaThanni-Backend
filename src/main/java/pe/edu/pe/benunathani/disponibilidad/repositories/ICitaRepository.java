@@ -13,4 +13,8 @@ public interface ICitaRepository extends JpaRepository<Cita,Integer> {
 
     @Query("from Cita c where c.fechaCita=:fecha")
     List<Cita> buscarCita(@Param("fecha") LocalDate fecha);
+
+    @Query("SELECT COUNT(c) FROM Cita c WHERE c.fechaCita > '2022-11-03' ")
+    int ContarFecha();
+
 }
