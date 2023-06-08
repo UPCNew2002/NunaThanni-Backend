@@ -33,4 +33,10 @@ public class InformeServiceImplement implements IInformeService {
     public Informe listId(int idInforme) {
         return iR.findById(idInforme).orElse(new Informe());
     }
+
+    @Override
+    public List<Informe> buscarresutado_test(String resultado_testInforme) {
+        return iR.findByresultado_testInforme(resultado_testInforme);
+    }
+
 }
