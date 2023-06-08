@@ -3,9 +3,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import pe.edu.pe.benunathani.disponibilidad.dtos.InformeDTO;
-import pe.edu.pe.benunathani.disponibilidad.dtos.OpcionesDTO;
 import pe.edu.pe.benunathani.disponibilidad.entities.Informe;
-import pe.edu.pe.benunathani.disponibilidad.entities.Opciones;
 import pe.edu.pe.benunathani.disponibilidad.services.IInformeService;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -15,7 +13,7 @@ public class InformeController {
     @Autowired
     private IInformeService iS;
     @PostMapping
-    public void insert (@RequestBody InformeController dto){
+    public void insert (@RequestBody InformeDTO dto){
         ModelMapper m=new ModelMapper();
         Informe e=m.map(dto,Informe.class);
         iS.insert(e);
@@ -40,10 +38,11 @@ public class InformeController {
         return dtos;
     }
 
-    @PutMapping
-    public void update(@RequestBody InformeDTO dto) {
-        ModelMapper m = new ModelMapper();
-        Informe o = m.map(dto, Informe.class);
-        iS.insert(o);
+    @GetMapping("/buscar-por-resultado-test/{resultado_testInforme}")
+    public List<InformeDTO> buscarPorTema(@PathVariable("resultado_testInforme") String resultado_testInforme) {
+        return iS.buscarresutado_test(resultado_testInforme).stream().map(x -> {
+            ModelMapper m = new ModelMapper();
+            return m.map(x, InformeDTO.class);
+        }).collect(Collectors.toList());
     }
 }
