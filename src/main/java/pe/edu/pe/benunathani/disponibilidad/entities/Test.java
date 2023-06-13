@@ -9,37 +9,43 @@ public class Test {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idTest;
-    @Column(name= "fechaTest", nullable = false)
-    private LocalDate fechaTest;
+    private int idtest;
+    @Column(name= "fechatest", nullable = false)
+    private LocalDate fechatest;
+
+    @Column(name= "pregunta", length = 300, nullable = false)
+    private String pregunta;
+
+    @Column(name= "opciones", length = 300, nullable = false)
+    private String opciones;
 
     @ManyToOne
-    @JoinColumn(name ="idPaciente")
+    @JoinColumn(name ="idpaciente")
     private Paciente paciente;
 
     public Test() {
     }
 
-    public Test(int idTest, LocalDate fechaTest, Paciente paciente) {
-        this.idTest = idTest;
-        this.fechaTest = fechaTest;
+    public Test(int idtest, LocalDate fechatest, Paciente paciente) {
+        this.idtest = idtest;
+        this.fechatest = fechatest;
         this.paciente = paciente;
     }
 
-    public int getIdTest() {
-        return idTest;
+    public int getIdtest() {
+        return idtest;
     }
 
-    public void setIdTest(int idTest) {
-        this.idTest = idTest;
+    public void setIdtest(int idtest) {
+        this.idtest = idtest;
     }
 
-    public LocalDate getFechaTest() {
-        return fechaTest;
+    public LocalDate getFechatest() {
+        return fechatest;
     }
 
-    public void setFechaTest(LocalDate fechaTest) {
-        this.fechaTest = fechaTest;
+    public void setFechatest(LocalDate fechatest) {
+        this.fechatest = fechatest;
     }
 
     public Paciente getPaciente() {
@@ -48,5 +54,21 @@ public class Test {
 
     public void setPaciente(Paciente paciente) {
         this.paciente = paciente;
+    }
+
+    public String getPregunta() {
+        return pregunta;
+    }
+
+    public void setPregunta(String pregunta) {
+        this.pregunta = pregunta;
+    }
+
+    public String getOpciones() {
+        return opciones;
+    }
+
+    public void setOpciones(String opciones) {
+        this.opciones = opciones;
     }
 }

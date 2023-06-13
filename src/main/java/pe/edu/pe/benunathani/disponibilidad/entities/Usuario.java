@@ -7,57 +7,57 @@ import javax.persistence.*;
 public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idUsuario;
-    @Column(name = "nameUsuario", length = 20, nullable = false)
-    private String nameUsuario;
-    @Column(name = "SnameUsuario", length = 20, nullable = false)
-    private String SnameUsuario;
-    @Column(name = "PassUsuario", length = 30, nullable = false)
-    private String PassUsuario;
+    private int idusuario;
+    @Column(name = "nameusuario", length = 20, nullable = false)
+    private String nameusuario;
+    @Column(name = "snameusuario", length = 20, nullable = false)
+    private String snameusuario;
+    @Column(name = "passusuario", length = 30, nullable = false)
+    private String passusuario;
     @Column(name = "telusuario", length = 9, nullable = false)
     private int telusuario;
 
     public Usuario() {
     }
 
-    public Usuario(int idUsuario, String nameUsuario, String snameUsuario, String passUsuario, int telusuario) {
-        this.idUsuario = idUsuario;
-        this.nameUsuario = nameUsuario;
-        SnameUsuario = snameUsuario;
-        PassUsuario = passUsuario;
+    public Usuario(int idusuario, String nameusuario, String snameusuario, String passusuario, int telusuario) {
+        this.idusuario = idusuario;
+        this.nameusuario = nameusuario;
+        this.snameusuario = snameusuario;
+        this.passusuario = passusuario;
         this.telusuario = telusuario;
     }
 
-    public int getIdUsuario() {
-        return idUsuario;
+    public int getIdusuario() {
+        return idusuario;
     }
 
-    public void setIdUsuario(int idUsuario) {
-        this.idUsuario = idUsuario;
+    public void setIdusuario(int idusuario) {
+        this.idusuario = idusuario;
     }
 
-    public String getNameUsuario() {
-        return nameUsuario;
+    public String getNameusuario() {
+        return nameusuario;
     }
 
-    public void setNameUsuario(String nameUsuario) {
-        this.nameUsuario = nameUsuario;
+    public void setNameusuario(String nameusuario) {
+        this.nameusuario = nameusuario;
     }
 
-    public String getSnameUsuario() {
-        return SnameUsuario;
+    public String getSnameusuario() {
+        return snameusuario;
     }
 
-    public void setSnameUsuario(String snameUsuario) {
-        SnameUsuario = snameUsuario;
+    public void setSnameusuario(String snameusuario) {
+        this.snameusuario = snameusuario;
     }
 
-    public String getPassUsuario() {
-        return PassUsuario;
+    public String getPassusuario() {
+        return passusuario;
     }
 
-    public void setPassUsuario(String passUsuario) {
-        PassUsuario = passUsuario;
+    public void setPassusuario(String passusuario) {
+        this.passusuario = passusuario;
     }
 
     public int getTelusuario() {

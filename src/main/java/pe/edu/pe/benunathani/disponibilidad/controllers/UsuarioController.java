@@ -38,7 +38,7 @@ public class UsuarioController {
         UsuarioDTO dto = m.map(uS.listId(id),UsuarioDTO.class);
         return dto;
     }
-    @PutMapping
+    @PutMapping("/{id}")
     public void update(@RequestBody UsuarioDTO dto){
         ModelMapper m= new ModelMapper();
         Usuario u = m.map(dto, Usuario.class);

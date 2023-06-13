@@ -37,6 +37,13 @@ public class PacienteController {
             return m.map(x,PacienteDTO.class);
         }).collect(Collectors.toList());
     }
+    @PostMapping("/buscar_correo")
+    public List<PacienteDTO> searchCorreo(@RequestBody String correo){
+        return pS.finde(correo).stream().map(x->{
+            ModelMapper m = new ModelMapper();
+            return m.map(x,PacienteDTO.class);
+        }).collect(Collectors.toList());
+    }
     @DeleteMapping("/{id}")
     public void delete(@PathVariable("id") Integer id){
         pS.delete(id);
@@ -48,7 +55,7 @@ public class PacienteController {
         return dto;
     }
 
-    @PutMapping
+    @PutMapping("/{id}")
     public void update (@RequestBody PacienteDTO dto){
         ModelMapper m=new ModelMapper();
         Paciente p=m.map(dto,Paciente.class);

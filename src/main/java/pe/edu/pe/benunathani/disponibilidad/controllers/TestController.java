@@ -41,7 +41,7 @@ public class TestController {
         return dto;
     }
 
-    @PutMapping
+    @PutMapping("/{id}")
     public void update (@RequestBody TestDTO dto){
         ModelMapper m=new ModelMapper();
         Test t =m.map(dto,Test.class);

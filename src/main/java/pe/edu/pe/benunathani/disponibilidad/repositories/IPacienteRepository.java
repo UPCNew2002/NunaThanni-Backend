@@ -9,6 +9,8 @@ import java.time.LocalDate;
 import java.util.List;
 
 public interface IPacienteRepository extends JpaRepository<Paciente,Integer> {
-    @Query("from Paciente p where p.nacimientoPaciente=:fecha")
+    @Query("from Paciente p where p.nacimientopaciente=:fecha")
     List<Paciente> buscarPacientes(@Param("fecha")LocalDate fecha);
+    @Query("from Paciente p where p.correopaciente like %:correo%")
+    List<Paciente> findBycorreoPaciente(String correo);
 }

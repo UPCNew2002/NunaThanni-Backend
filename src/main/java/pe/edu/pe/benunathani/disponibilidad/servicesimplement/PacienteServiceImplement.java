@@ -30,6 +30,11 @@ public class PacienteServiceImplement implements IPacienteService {
     }
 
     @Override
+    public List<Paciente> finde(String correo) {
+        return pR.findBycorreoPaciente(correo);
+    }
+
+    @Override
     public void delete(int idPaciente) {
         pR.deleteById(idPaciente);
     }

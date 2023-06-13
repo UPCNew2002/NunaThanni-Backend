@@ -3,42 +3,42 @@ package pe.edu.pe.benunathani.disponibilidad.dtos;
 import javax.persistence.Column;
 
 public class UsuarioDTO {
-    private int idUsuario;
-    private String nameUsuario;
-    private String SnameUsuario;
-    private String PassUsuario;
+    private int idusuario;
+    private String nameusuario;
+    private String snameusuario;
+    private String passusuario;
     private int telusuario;
 
-    public int getIdUsuario() {
-        return idUsuario;
+    public int getIdusuario() {
+        return idusuario;
     }
 
-    public void setIdUsuario(int idUsuario) {
-        this.idUsuario = idUsuario;
+    public void setIdusuario(int idusuario) {
+        this.idusuario = idusuario;
     }
 
-    public String getNameUsuario() {
-        return nameUsuario;
+    public String getNameusuario() {
+        return nameusuario;
     }
 
-    public void setNameUsuario(String nameUsuario) {
-        this.nameUsuario = nameUsuario;
+    public void setNameusuario(String nameusuario) {
+        this.nameusuario = nameusuario;
     }
 
-    public String getSnameUsuario() {
-        return SnameUsuario;
+    public String getSnameusuario() {
+        return snameusuario;
     }
 
-    public void setSnameUsuario(String snameUsuario) {
-        SnameUsuario = snameUsuario;
+    public void setSnameusuario(String snameusuario) {
+        this.snameusuario = snameusuario;
     }
 
-    public String getPassUsuario() {
-        return PassUsuario;
+    public String getPassusuario() {
+        return passusuario;
     }
 
-    public void setPassUsuario(String passUsuario) {
-        PassUsuario = passUsuario;
+    public void setPassusuario(String passusuario) {
+        this.passusuario = passusuario;
     }
 
     public int getTelusuario() {
