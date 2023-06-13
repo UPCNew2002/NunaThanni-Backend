@@ -7,6 +7,7 @@ import pe.edu.pe.benunathani.disponibilidad.repositories.ITratamientoRepository;
 import pe.edu.pe.benunathani.disponibilidad.services.ITratamientoService;
 
 import java.util.List;
+
 @Service
 public class TratamientoServiceImplement implements ITratamientoService {
 
@@ -36,6 +37,4 @@ public class TratamientoServiceImplement implements ITratamientoService {
     public List<Tratamiento> buscarTema(String temaTratamiento) {
         return tR.findBytemaTratamiento(temaTratamiento);
     }
-
-
 }

@@ -3,7 +3,7 @@ package pe.edu.pe.benunathani.disponibilidad.entities;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "tratamientos")
+@Table(name = "tratamiento")
 public class Tratamiento {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,16 +15,16 @@ public class Tratamiento {
 
     @ManyToOne
     @JoinColumn(name = "id")
-    private Rutina_Recreativa rutina_recreativa;
+    private Rutinas_recreativas rutinas_recreativas;
 
     public Tratamiento() {
     }
 
-    public Tratamiento(int idTratamiento, String temaTratamiento, String descripcionTratamiento, Rutina_Recreativa rutina_recreativa) {
+    public Tratamiento(int idTratamiento, String temaTratamiento, String descripcionTratamiento, Rutinas_recreativas rutinas_recreativas) {
         this.idTratamiento = idTratamiento;
         this.temaTratamiento = temaTratamiento;
         this.descripcionTratamiento = descripcionTratamiento;
-        this.rutina_recreativa = rutina_recreativa;
+        this.rutinas_recreativas = rutinas_recreativas;
     }
 
     public int getIdTratamiento() {
@@ -51,11 +51,11 @@ public class Tratamiento {
         this.descripcionTratamiento = descripcionTratamiento;
     }
 
-    public Rutina_Recreativa getRutina_recreativa() {
-        return rutina_recreativa;
+    public Rutinas_recreativas getRutinas_recreativas() {
+        return rutinas_recreativas;
     }
 
-    public void setRutina_recreativa(Rutina_Recreativa rutina_recreativa) {
-        this.rutina_recreativa = rutina_recreativa;
+    public void setRutinas_recreativas(Rutinas_recreativas rutinas_recreativas) {
+        this.rutinas_recreativas = rutinas_recreativas;
     }
 }

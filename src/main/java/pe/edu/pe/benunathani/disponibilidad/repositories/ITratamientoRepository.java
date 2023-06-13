@@ -6,8 +6,7 @@ import pe.edu.pe.benunathani.disponibilidad.entities.Tratamiento;
 
 import java.util.List;
 
-public interface ITratamientoRepository extends JpaRepository<Tratamiento,Integer> {
+public interface ITratamientoRepository extends JpaRepository<Tratamiento, Integer> {
     @Query("from Tratamiento t where t.temaTratamiento like %:temaTratamiento%")
     List<Tratamiento> findBytemaTratamiento(String temaTratamiento);
-
 }

@@ -2,10 +2,9 @@ package pe.edu.pe.benunathani.disponibilidad.entities;
 
 
 import javax.persistence.*;
-
 @Entity
-@Table(name="Rutinas_recreativas")
-public class Rutina_Recreativa {
+@Table(name="rutinas_recreativas")
+public class Rutinas_recreativas {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -14,10 +13,10 @@ public class Rutina_Recreativa {
     @Column(name = "descripcion",length = 100,nullable = false)
     private String descripcion;
 
-    public Rutina_Recreativa() {
+    public Rutinas_recreativas() {
     }
 
-    public Rutina_Recreativa(int id, String nombre, String descripcion) {
+    public Rutinas_recreativas(int id, String nombre, String descripcion) {
         this.id = id;
         this.nombre = nombre;
         this.descripcion = descripcion;

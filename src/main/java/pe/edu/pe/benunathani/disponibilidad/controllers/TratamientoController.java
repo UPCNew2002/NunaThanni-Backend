@@ -1,5 +1,4 @@
 package pe.edu.pe.benunathani.disponibilidad.controllers;
-
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -13,7 +12,6 @@ import java.util.stream.Collectors;
 @RestController
 @RequestMapping("/tratamientos")
 public class TratamientoController {
-
     @Autowired
     private ITratamientoService tS;
 

@@ -1,16 +1,13 @@
 package pe.edu.pe.benunathani.disponibilidad.dtos;
 
-import pe.edu.pe.benunathani.disponibilidad.entities.Rutina_Recreativa;
-
-
+import pe.edu.pe.benunathani.disponibilidad.entities.Rutinas_recreativas;
 
 public class TratamientoDTO {
-
     private int idTratamiento;
     private String temaTratamiento;
     private String descripcionTratamiento;
 
-    private Rutina_Recreativa rutina_recreativa;
+    private Rutinas_recreativas rutinas_recreativas;
 
     public int getIdTratamiento() {
         return idTratamiento;
@@ -36,11 +33,11 @@ public class TratamientoDTO {
         this.descripcionTratamiento = descripcionTratamiento;
     }
 
-    public Rutina_Recreativa getRutina_recreativa() {
-        return rutina_recreativa;
+    public Rutinas_recreativas getRutinas_recreativas() {
+        return rutinas_recreativas;
     }
 
-    public void setRutina_recreativa(Rutina_Recreativa rutina_recreativa) {
-        this.rutina_recreativa = rutina_recreativa;
+    public void setRutinas_recreativas(Rutinas_recreativas rutinas_recreativas) {
+        this.rutinas_recreativas = rutinas_recreativas;
     }
 }

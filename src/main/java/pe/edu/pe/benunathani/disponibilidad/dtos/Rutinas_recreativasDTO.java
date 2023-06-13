@@ -1,7 +1,8 @@
 package pe.edu.pe.benunathani.disponibilidad.dtos;
 
 
-public class Rutina_RecreativaDTO {
+public class Rutinas_recreativasDTO {
+
     private int id;
     private String nombre;
     private String descripcion;
