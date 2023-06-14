@@ -13,12 +13,6 @@ public class Test {
     @Column(name= "fechatest", nullable = false)
     private LocalDate fechatest;
 
-    @Column(name= "pregunta", length = 300, nullable = false)
-    private String pregunta;
-
-    @Column(name= "opciones", length = 300, nullable = false)
-    private String opciones;
-
     @ManyToOne
     @JoinColumn(name ="idpaciente")
     private Paciente paciente;
@@ -56,19 +50,4 @@ public class Test {
         this.paciente = paciente;
     }
 
-    public String getPregunta() {
-        return pregunta;
-    }
-
-    public void setPregunta(String pregunta) {
-        this.pregunta = pregunta;
-    }
-
-    public String getOpciones() {
-        return opciones;
-    }
-
-    public void setOpciones(String opciones) {
-        this.opciones = opciones;
-    }
 }

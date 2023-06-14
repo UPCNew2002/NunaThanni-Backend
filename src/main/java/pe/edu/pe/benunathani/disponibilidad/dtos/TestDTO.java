@@ -9,8 +9,6 @@ public class TestDTO {
     private int idtest;
     private LocalDate fechatest;
     private Paciente paciente;
-    private String pregunta;
-    private String opciones;
 
     public int getIdtest() {
         return idtest;
@@ -36,19 +34,4 @@ public class TestDTO {
         this.paciente = paciente;
     }
 
-    public String getPregunta() {
-        return pregunta;
-    }
-
-    public void setPregunta(String pregunta) {
-        this.pregunta = pregunta;
-    }
-
-    public String getOpciones() {
-        return opciones;
-    }
-
-    public void setOpciones(String opciones) {
-        this.opciones = opciones;
-    }
 }
