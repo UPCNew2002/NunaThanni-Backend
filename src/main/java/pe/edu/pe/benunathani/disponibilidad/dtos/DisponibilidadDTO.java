@@ -7,7 +7,7 @@ public class DisponibilidadDTO {
     private int idDisponibilidad;
     private String inicio_turno;
     private String fin_turno;
-    private LocalDate dias_laborables;
+    private String dias_laborables;
 
     public int getIdDisponibilidad() {
         return idDisponibilidad;
@@ -33,11 +33,11 @@ public class DisponibilidadDTO {
         this.fin_turno = fin_turno;
     }
 
-    public LocalDate getDias_laborables() {
+    public String getDias_laborables() {
         return dias_laborables;
     }
 
-    public void setDias_laborables(LocalDate dias_laborables) {
+    public void setDias_laborables(String dias_laborables) {
         this.dias_laborables = dias_laborables;
     }
 }

@@ -6,7 +6,7 @@ import pe.edu.pe.benunathani.disponibilidad.entities.Tratamiento;
 public class InformeDTO {
 
     private int idInforme;
-    private String resultado;
+    private String resultado_testInforme;
     private Test test;
     private Tratamiento tratamiento;
 
@@ -18,12 +18,12 @@ public class InformeDTO {
         this.idInforme = idInforme;
     }
 
-    public String getResultado() {
-        return resultado;
+    public String getResultado_testInforme() {
+        return resultado_testInforme;
     }
 
-    public void setResultado(String resultado) {
-        this.resultado = resultado;
+    public void setResultado_testInforme(String resultado_testInforme) {
+        this.resultado_testInforme = resultado_testInforme;
     }
 
     public Test getTest() {

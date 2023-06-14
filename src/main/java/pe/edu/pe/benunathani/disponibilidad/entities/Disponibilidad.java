@@ -14,12 +14,12 @@ public class Disponibilidad {
     @Column(name = "fin_turno", length = 5, nullable = false)
     private String fin_turno;
     @Column(name = "dias_laborables", nullable = false)
-    private LocalDate dias_laborables;
+    private String dias_laborables;
 
     public Disponibilidad() {
     }
 
-    public Disponibilidad(int idDisponibilidad, String inicio_turno, String fin_turno, LocalDate dias_laborables) {
+    public Disponibilidad(int idDisponibilidad, String inicio_turno, String fin_turno, String dias_laborables) {
         this.idDisponibilidad = idDisponibilidad;
         this.inicio_turno = inicio_turno;
         this.fin_turno = fin_turno;
@@ -50,11 +50,11 @@ public class Disponibilidad {
         this.fin_turno = fin_turno;
     }
 
-    public LocalDate getDias_laborables() {
+    public String getDias_laborables() {
         return dias_laborables;
     }
 
-    public void setDias_laborables(LocalDate dias_laborables) {
+    public void setDias_laborables(String dias_laborables) {
         this.dias_laborables = dias_laborables;
     }
 }
