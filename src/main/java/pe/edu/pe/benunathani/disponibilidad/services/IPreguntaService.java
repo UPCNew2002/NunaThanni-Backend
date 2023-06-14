@@ -8,4 +8,7 @@ import java.util.List;
 public interface IPreguntaService {
     public void insert (Pregunta pregunta);
     List<Pregunta> list();
+
+    public void delete(int idPregunta);
+    public Pregunta listId (int idPregunta);
 }

@@ -22,4 +22,14 @@ public class PreguntaServiceImplement implements IPreguntaService {
     public List<Pregunta> list() {
         return pR.findAll();
     }
+
+    @Override
+    public void delete(int idPregunta) {
+        pR.deleteById(idPregunta);
+    }
+
+    @Override
+    public Pregunta listId(int idPregunta) {
+        return pR.findById(idPregunta).orElse(new Pregunta());
+    }
 }

@@ -29,4 +29,23 @@ public class PreguntaController {
             return m.map(x, PreguntaDTO.class);
         }).collect(Collectors.toList());
     }
+
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable ("id")Integer id){
+        pS.delete(id);
+    }
+
+    @GetMapping("/{id}")
+    public PreguntaDTO listId(@PathVariable ("id") Integer id){
+        ModelMapper m=new ModelMapper();
+        PreguntaDTO dto= m.map(pS.listId(id),PreguntaDTO.class);
+        return dto;
+    }
+
+    @PutMapping
+    public void update (@RequestBody PreguntaDTO dto){
+        ModelMapper m=new ModelMapper();
+        Pregunta p=m.map(dto,Pregunta.class);
+        pS.insert(p);
+    }
 }
