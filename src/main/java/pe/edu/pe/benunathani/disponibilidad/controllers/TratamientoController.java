@@ -2,6 +2,7 @@ package pe.edu.pe.benunathani.disponibilidad.controllers;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import pe.edu.pe.benunathani.disponibilidad.dtos.RutinaTratamientoDTO;
 import pe.edu.pe.benunathani.disponibilidad.dtos.TratamientoDTO;
 import pe.edu.pe.benunathani.disponibilidad.entities.Tratamiento;
 import pe.edu.pe.benunathani.disponibilidad.services.ITratamientoService;
@@ -55,5 +56,11 @@ public class TratamientoController {
             ModelMapper m = new ModelMapper();
             return m.map(x, TratamientoDTO.class);
         }).collect(Collectors.toList());
+    }
+
+    @GetMapping("/rutina-count")
+    public List<RutinaTratamientoDTO> getRutinaCountByTratamiento() {
+        List<RutinaTratamientoDTO> rutinaTratamientoDTOs = tS.reporte_tratamiento();
+        return rutinaTratamientoDTOs;
     }
 }

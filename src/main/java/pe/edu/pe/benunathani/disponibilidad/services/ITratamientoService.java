@@ -1,5 +1,6 @@
 package pe.edu.pe.benunathani.disponibilidad.services;
 
+import pe.edu.pe.benunathani.disponibilidad.dtos.RutinaTratamientoDTO;
 import pe.edu.pe.benunathani.disponibilidad.entities.Tratamiento;
 
 import java.util.List;
@@ -11,4 +12,6 @@ public interface ITratamientoService {
     public void delete(int idTratamiento);
     public Tratamiento listId(int idTratamiento);
     List<Tratamiento> buscarTema(String temaTratamiento);
+
+    public List<RutinaTratamientoDTO> reporte_tratamiento();
 }
