@@ -3,6 +3,8 @@ package pe.edu.pe.benunathani.disponibilidad.controllers;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import pe.edu.pe.benunathani.disponibilidad.dtos.PreguntaTestDTO;
+import pe.edu.pe.benunathani.disponibilidad.dtos.RutinaTratamientoDTO;
 import pe.edu.pe.benunathani.disponibilidad.dtos.TestDTO;
 import pe.edu.pe.benunathani.disponibilidad.entities.Test;
 import pe.edu.pe.benunathani.disponibilidad.services.ITestService;
@@ -46,5 +48,11 @@ public class TestController {
         ModelMapper m=new ModelMapper();
         Test t =m.map(dto,Test.class);
         tS.insert(t);
+    }
+
+    @GetMapping("/pregunta-count")
+    public List<PreguntaTestDTO> getCountRutinaByTest() {
+        List<PreguntaTestDTO> preguntaTestDTOS = tS.reporteTest();
+        return preguntaTestDTOS;
     }
 }

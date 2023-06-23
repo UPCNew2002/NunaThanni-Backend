@@ -8,7 +8,7 @@ public class Pregunta {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idPregunta;
-    @Column(name = "txtPregunta",length = 60,nullable = false)
+    @Column(name = "txtPregunta",length = 200,nullable = false)
     private String txtPregunta;
 
     @ManyToOne

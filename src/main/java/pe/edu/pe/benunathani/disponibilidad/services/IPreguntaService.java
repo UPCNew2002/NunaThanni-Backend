@@ -11,4 +11,6 @@ public interface IPreguntaService {
 
     public void delete(int idPregunta);
     public Pregunta listId (int idPregunta);
+
+
 }
