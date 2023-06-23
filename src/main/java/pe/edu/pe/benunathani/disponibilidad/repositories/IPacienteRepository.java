@@ -11,6 +11,10 @@ import java.util.List;
 public interface IPacienteRepository extends JpaRepository<Paciente,Integer> {
     @Query("from Paciente p where p.nacimientopaciente=:fecha")
     List<Paciente> buscarPacientes(@Param("fecha")LocalDate fecha);
-    @Query("from Paciente p where p.correopaciente like %:correo%")
-    List<Paciente> findBycorreoPaciente(String correo);
+    @Query(value = "SELECT u.nameusuario, p.nacimientopaciente\n" +
+            "FROM pacientes p\n" +
+            "JOIN usuarios u ON p.idusuario = u.idusuario\n" +
+            "WHERE p.nacimientopaciente > '2005-01-01'", nativeQuery = true)
+    List<String[]> getnombresynacimientos();
+
 }

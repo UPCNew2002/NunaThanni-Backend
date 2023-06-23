@@ -1,5 +1,6 @@
 package pe.edu.pe.benunathani.disponibilidad.services;
 
+import pe.edu.pe.benunathani.disponibilidad.dtos.PacienteUsuarioDTO;
 import pe.edu.pe.benunathani.disponibilidad.entities.Paciente;
 
 import java.time.LocalDate;
@@ -9,7 +10,7 @@ public interface IPacienteService {
     public void insert(Paciente paciente);
     List<Paciente> list();
     List<Paciente> find(LocalDate fecha);
-    List<Paciente> finde(String correo);
     public void delete (int idPaciente);
     public Paciente listId (int idPaciente);
+    public List<PacienteUsuarioDTO> reportefechasPaciente();
 }

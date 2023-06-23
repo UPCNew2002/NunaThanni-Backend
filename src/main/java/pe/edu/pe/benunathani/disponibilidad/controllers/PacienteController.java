@@ -4,6 +4,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import pe.edu.pe.benunathani.disponibilidad.dtos.PacienteDTO;
+import pe.edu.pe.benunathani.disponibilidad.dtos.PacienteUsuarioDTO;
 import pe.edu.pe.benunathani.disponibilidad.entities.Paciente;
 import pe.edu.pe.benunathani.disponibilidad.services.IPacienteService;
 
@@ -37,13 +38,13 @@ public class PacienteController {
             return m.map(x,PacienteDTO.class);
         }).collect(Collectors.toList());
     }
-    @PostMapping("/buscar_correo")
-    public List<PacienteDTO> searchCorreo(@RequestBody String correo){
-        return pS.finde(correo).stream().map(x->{
-            ModelMapper m = new ModelMapper();
-            return m.map(x,PacienteDTO.class);
-        }).collect(Collectors.toList());
+
+    @GetMapping("/paciente-count")
+    public List<PacienteUsuarioDTO> getnombresynacimientos() {
+        List<PacienteUsuarioDTO> pacienteUsuarioDTOS = pS.reportefechasPaciente();
+        return pacienteUsuarioDTOS;
     }
+
     @DeleteMapping("/{id}")
     public void delete(@PathVariable("id") Integer id){
         pS.delete(id);
