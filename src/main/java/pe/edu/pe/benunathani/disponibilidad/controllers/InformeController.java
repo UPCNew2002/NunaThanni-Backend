@@ -3,6 +3,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import pe.edu.pe.benunathani.disponibilidad.dtos.InformeDTO;
+import pe.edu.pe.benunathani.disponibilidad.dtos.InformeTratamientoDTO;
 import pe.edu.pe.benunathani.disponibilidad.entities.Informe;
 import pe.edu.pe.benunathani.disponibilidad.services.IInformeService;
 import java.util.List;
@@ -44,5 +45,10 @@ public class InformeController {
             ModelMapper m = new ModelMapper();
             return m.map(x, InformeDTO.class);
         }).collect(Collectors.toList());
+    }
+    @GetMapping("/tratamiento-count")
+    public List<InformeTratamientoDTO> getTratamientoCountByInforme() {
+        List<InformeTratamientoDTO> informeTratamientoDTOS = iS.reporte_informe();
+        return informeTratamientoDTOS;
     }
 }
