@@ -12,4 +12,10 @@ import java.util.List;
 public interface IPsicologoRepository extends JpaRepository<Psicologo,Integer> {
     @Query("from Psicologo v where v.correoPsicologo=:correo")
     List<Psicologo> buscarCorreo(@Param("correo") String correo);
+
+    @Query(value = "SELECT e.tipo_Especialidad,count(p.id_Psicologo) from Psicologos p \n" +
+            "join Especialidades e on  e.id_Especialidad = p.id_Psicologo \n" +
+            "group by e.tipo_Especialidad ORDER BY COUNT(e.tipo_Especialidad) DESC",
+            nativeQuery = true)
+    List<String[]> getEspecialidadCountByPsicologo();
 }

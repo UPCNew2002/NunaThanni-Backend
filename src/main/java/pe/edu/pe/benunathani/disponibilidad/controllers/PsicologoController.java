@@ -4,6 +4,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import pe.edu.pe.benunathani.disponibilidad.dtos.PsicologoDTO;
+import pe.edu.pe.benunathani.disponibilidad.dtos.PsicologoEspecialidadDTO;
 import pe.edu.pe.benunathani.disponibilidad.entities.Psicologo;
 import pe.edu.pe.benunathani.disponibilidad.services.IPsicologoService;
 
@@ -58,6 +59,10 @@ public class PsicologoController {
             return m.map(x, PsicologoDTO.class);
         }).collect(Collectors.toList());
     }
-
+    @GetMapping("/especialidad-count")
+    public List<PsicologoEspecialidadDTO> getEspecialidadByCountPsicologo() {
+        List<PsicologoEspecialidadDTO> psicologoEspecialidadDTOS =pS.reporte_especialidad();
+        return psicologoEspecialidadDTOS;
+    }
 
 }

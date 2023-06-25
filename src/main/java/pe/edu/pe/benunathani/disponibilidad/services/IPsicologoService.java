@@ -1,5 +1,6 @@
 package pe.edu.pe.benunathani.disponibilidad.services;
 
+import pe.edu.pe.benunathani.disponibilidad.dtos.PsicologoEspecialidadDTO;
 import pe.edu.pe.benunathani.disponibilidad.entities.Psicologo;
 
 import java.time.LocalDate;
@@ -12,5 +13,7 @@ public interface IPsicologoService {
     public void delete(int idPsicologo);
     public Psicologo  listId(int idPsicologo);
     List<Psicologo> find(String correo);
+
+    public List<PsicologoEspecialidadDTO> reporte_especialidad();
 
 }
