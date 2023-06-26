@@ -3,6 +3,7 @@ package pe.edu.pe.benunathani.disponibilidad.services;
 import pe.edu.pe.benunathani.disponibilidad.dtos.InformeTratamientoDTO;
 import pe.edu.pe.benunathani.disponibilidad.dtos.RutinaTratamientoDTO;
 import pe.edu.pe.benunathani.disponibilidad.entities.Informe;
+import pe.edu.pe.benunathani.disponibilidad.entities.Psicologo;
 import pe.edu.pe.benunathani.disponibilidad.entities.Tratamiento;
 
 
@@ -14,7 +15,7 @@ public interface IInformeService {
     List<Informe> list();
     public void delete(int idInforme);
     public Informe listId(int idInforme);
-    List<Informe> buscarresutado_test(String resultado_testInforme);
+    List<Informe> find(String resultado);
 
     public List<InformeTratamientoDTO> reporte_informe();
 }

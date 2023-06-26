@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 import pe.edu.pe.benunathani.disponibilidad.dtos.InformeTratamientoDTO;
 import pe.edu.pe.benunathani.disponibilidad.dtos.RutinaTratamientoDTO;
 import pe.edu.pe.benunathani.disponibilidad.entities.Informe;
+import pe.edu.pe.benunathani.disponibilidad.entities.Psicologo;
 import pe.edu.pe.benunathani.disponibilidad.repositories.IInformeRepository;
 import pe.edu.pe.benunathani.disponibilidad.services.IInformeService;
 
@@ -35,7 +36,9 @@ public class InformeServiceImplement implements IInformeService {
     }
 
     @Override
-    public List<Informe> buscarresutado_test(String resultado_testInforme) {return iR.findByresultado_testInforme(resultado_testInforme);}
+    public List<Informe> find(String resultado) {
+        return iR.buscarResultado(resultado);
+    }
 
     @Override
     public List<InformeTratamientoDTO> reporte_informe() {
