@@ -50,9 +50,9 @@ public class TratamientoController {
         tS.insert(p);
     }
 
-    @GetMapping("/buscar-por-tema/{tema}")
-    public List<TratamientoDTO> buscarPorTema(@PathVariable("tema") String tema) {
-        return tS.buscarTema(tema).stream().map(x -> {
+    @PostMapping("/buscar")
+    public List<TratamientoDTO> search(@RequestBody String temaTratamiento) {
+        return tS.find(temaTratamiento).stream().map(x -> {
             ModelMapper m = new ModelMapper();
             return m.map(x, TratamientoDTO.class);
         }).collect(Collectors.toList());

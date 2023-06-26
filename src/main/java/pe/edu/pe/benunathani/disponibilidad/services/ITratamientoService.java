@@ -11,7 +11,7 @@ public interface ITratamientoService {
     List<Tratamiento> list();
     public void delete(int idTratamiento);
     public Tratamiento listId(int idTratamiento);
-    List<Tratamiento> buscarTema(String temaTratamiento);
+    List<Tratamiento> find(String temaTratamiento);
 
     public List<RutinaTratamientoDTO> reporte_tratamiento();
 }

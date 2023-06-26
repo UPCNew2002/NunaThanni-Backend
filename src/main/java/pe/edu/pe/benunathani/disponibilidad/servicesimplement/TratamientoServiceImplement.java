@@ -36,8 +36,8 @@ public class TratamientoServiceImplement implements ITratamientoService {
     }
 
     @Override
-    public List<Tratamiento> buscarTema(String temaTratamiento) {
-        return tR.findBytemaTratamiento(temaTratamiento);
+    public List<Tratamiento> find(String temaTratamiento) {
+        return tR.buscarTema(temaTratamiento);
     }
 
     @Override
