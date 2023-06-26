@@ -11,7 +11,7 @@
 	<groupId>pe.edu.pe.benunathani</groupId>
 	<artifactId>disponibilidad</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>disponibilidad</name>
 	<description>disponibilidad</description>
 	<properties>
